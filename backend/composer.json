@@ -1,0 +1,19 @@
+{
+    "name": "blood-donation-system/backend",
+    "description": "Backend API for Blood Donation System",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "mongodb/mongodb": "^1.12",
+        "firebase/php-jwt": "^6.0",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public"
+    }
+} 

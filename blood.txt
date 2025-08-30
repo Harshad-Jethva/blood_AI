@@ -1,0 +1,32 @@
+blood Microsoft Windows [Version 10.0.26100.4484]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\harsh>mongosh
+Current Mongosh Log ID: 68706005037ce8581c748a5e
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.3
+Using MongoDB:          8.0.11
+Using Mongosh:          2.5.3
+mongosh 2.5.5 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2025-07-03T05:39:11.887+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use blood_donation_system
+switched to db blood_donation_system
+blood_donation_system> db.createCollections(donors, camps, trusts, certificates)
+ReferenceError: donors is not defined
+blood_donation_system> db.createCollections("donors", "camps", "trusts", "certificates")
+TypeError: db.createCollections is not a function
+blood_donation_system> db.createCollection('donors')
+{ ok: 1 }
+blood_donation_system> db.createCollection('camps')
+{ ok: 1 }
+blood_donation_system> db.createCollection('trusts')
+{ ok: 1 }
+blood_donation_system> db.createCollection('certificates')
+{ ok: 1 }
+blood_donation_system>
